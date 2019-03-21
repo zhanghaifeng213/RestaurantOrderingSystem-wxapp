@@ -1,0 +1,27 @@
+<navigator url='' class='vip container rounded'>
+  <view class='vip-oval'></view>
+  <view class='vip-integral flex-col align-items-end'>
+    <text class='flex-1 bold number-xl overflow-ellipsis'>2430</text>
+    <text class='opacity-50'>积分</text>
+  </view>
+  <view class='vip-info flex-col justify-content-around'>
+    <text class='opacity-50'>会员卡</text>
+    <text class='overflow-ellipsis'>YujunZhu</text>
+  </view>
+</navigator>
+<navigator url='/pages/menu/menu' class='start bg-secondary container white rounded justify-content-between align-items-center box-shadow'>
+  <view class='start-circle1'></view>
+  <view class='start-circle2'></view>
+  <view class='start-circle3'></view>
+  <view class='flex-col'>
+    <text class='number bold'>B 23</text>
+    <text class='font-sm'>桌号</text>
+  </view>
+  <text class='font-xl'>开始点餐</text>
+</navigator>
+<navigator url='' class='recommended container rounded box-shadow'>
+  <image class='fill' mode='aspectFill' src='/image/recommended-1.png'></image>
+</navigator>
+<navigator url='' class='recommended container rounded box-shadow'>
+  <image class='fill' mode='aspectFill' src='/image/recommended-2.png'></image>
+</navigator>

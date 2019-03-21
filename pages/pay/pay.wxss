@@ -1,0 +1,72 @@
+.vip{
+  margin-top: 16rpx;
+  height: 354rpx;
+  box-shadow: 0 12px 12px 0 rgba(0,0,0,0.04),0 0 1px rgba(255,255,255,0.15) inset,0 1px #ffffff inset;
+  background-color: #FFC491;
+  position: relative
+}
+.vip-oval{
+  position: absolute;
+  left: -110rpx;
+  top: -294rpx;
+  width: 1306rpx;
+  height: 562rpx;
+  border-radius: 50%;
+  background-image: linear-gradient(20deg, #FFFFFF 0%, rgba(0,0,0,0) 30%);
+  background-color: #FFC491;
+  background-blend-mode: soft-light
+}
+.vip-integral{
+  position: absolute;
+  right: 48rpx;
+  top: 0;
+  width: 606rpx;
+  height: 216rpx;
+}
+.vip-info{
+  position: absolute;
+  left: 48rpx;
+  bottom: 48rpx;
+  width: 606rpx;
+  height: 80rpx;
+}
+.order{
+  margin-top: 40rpx;
+  padding: 48rpx 32rpx 0;
+  background-image: linear-gradient(340deg,rgba(0,0,0,0), rgba(255,255,255,0.5));
+  background-blend-mode: soft-light;
+  position: relative
+}
+.order-circle1,.order-circle2,.order-circle3{
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255,0.2)
+}
+.order-circle1{
+  left: 100rpx;
+  top: -40rpx;
+  width: 84rpx;
+  height: 84rpx
+}
+.order-circle2{
+  left: 560rpx;
+  top: 540rpx;
+  width: 128rpx;
+  height: 128rpx
+}
+.order-circle3{
+  left: 208rpx;
+  top: 580rpx;
+  width: 192rpx;
+  height: 192rpx
+}
+.order-main{
+  min-height: 414rpx;
+  box-sizing: border-box;
+  padding: 32rpx;
+  position: relative
+}
+.order-pay{
+  padding: 60rpx;
+  align-self: center
+}

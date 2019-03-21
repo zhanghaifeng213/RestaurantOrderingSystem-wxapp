@@ -1,0 +1,46 @@
+<wxs module='format' src='../../utils/format.wxs'/>
+<navigator url='' class='vip container rounded'>
+  <view class='vip-oval'></view>
+  <view class='vip-integral flex-col align-items-end'>
+    <text class='flex-1 bold number-xl overflow-ellipsis'>2430</text>
+    <text class='opacity-50'>积分</text>
+  </view>
+  <view class='vip-info flex-col justify-content-around'>
+    <text class='opacity-50'>会员卡</text>
+    <text class='overflow-ellipsis'>YujunZhu</text>
+  </view>
+</navigator>
+<view class='order bg-secondary flex-col container rounded box-shadow'>
+  <view class='order-circle1'></view>
+  <view class='order-circle2'></view>
+  <view class='order-circle3'></view>
+  <view class='order-main bg-white black flex-col justify-content-between'>
+    <view class='justify-content-between align-items-center'>
+      <text>苏州龙湖店</text>
+      <view class='flex-col align-items-end opacity-50'>
+        <text>
+          <text class='font-sm'>桌号：</text>
+          <text class='number-sm bold'>B 23</text>
+        </text>
+        <text class='font-sm'>
+          <text>下单时间：</text>
+          <text>{{format.timestampToString(order.timestampe)}}</text>
+        </text>
+      </view>
+    </view>
+    <view class='flex-col'>
+      <view class='justify-content-between align-items-center'>
+        <text class='font-sm opacity-70'>菜品数量</text>
+        <text class='number bold'>{{order.quantity}}</text>
+      </view>
+      <view class='order-detail justify-content-center'>
+        <text class='iconfont icon-rounddown'></text>
+      </view>
+    </view>
+    <view class='justify-content-between align-items-center'>
+      <text class='font-sm opacity-70'>共计金额</text>
+      <text class='number bold'>￥{{order.totalPrice}}</text>
+    </view>
+  </view>
+  <view class='order-pay font-xl white' bindtap='pay'>立即支付</view>
+</view>

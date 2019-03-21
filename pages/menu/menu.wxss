@@ -1,0 +1,95 @@
+.types{
+  display: block;
+  padding: 16rpx 0 164rpx
+}
+.type{
+  margin-bottom: 24rpx;
+}
+.type-header{
+  height: 144rpx
+}
+.type-icon{
+  width: 96rpx;
+  height: 96rpx;
+  margin: 24rpx;
+  border-radius: 6rpx
+}
+.type-triangle{
+  margin: 0 50rpx;
+  transition: transform 200ms linear
+}
+.type-triangle-opened{
+  transform: rotate(-90deg)
+}
+.type-list{
+  padding: 32rpx 32rpx 0
+}
+.item{
+  width: 300rpx;
+  height: 406rpx;
+  margin-bottom: 48rpx
+}
+.item-img{
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  border: 1px solid #DEDEDE
+}
+.item-info{
+  margin-left: 12rpx
+}
+.item-add{
+  margin: 0;
+  width: 88rpx;
+  height: 62rpx;
+  line-height: 62rpx;
+  border-radius: 10rpx
+}
+.pay{
+  height: 164rpx;
+  padding: 0 32rpx;
+  border-top: 1px solid #DEDEDE;
+  box-sizing: border-box
+}
+.pay-count{
+  margin-right: 32rpx
+}
+.pay-check{
+  margin: 0;
+  width: 208rpx;
+  height: 84rpx;
+  border-radius: 8rpx;
+  background-image: linear-gradient(rgba(0,0,0,0),rgba(255,255,255,0.5));
+  background-blend-mode: soft-light
+}
+.detail{
+  max-height: 360rpx;
+  border-top: 1px solid #DEDEDE;
+  transition: max-height 200ms
+}
+.detail-item{
+  height: 120rpx;
+  box-sizing: border-box;
+  padding: 32rpx
+}
+.detail-item-title{
+  width: 300rpx
+}
+.detail-hidden{
+  max-height: 0
+}
+.stepper{
+  width: 240rpx;
+  box-sizing: border-box;
+  border: 1px solid #DEDEDE;
+  border-radius: 8rpx
+}
+.stepper-count{
+  border-left: 1px solid #DEDEDE;
+  border-right: 1px solid #DEDEDE
+}
+.stepper-btn{
+  width: 64rpx;
+  height: 64rpx
+}
