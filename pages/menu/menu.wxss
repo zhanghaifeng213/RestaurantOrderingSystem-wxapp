@@ -73,7 +73,7 @@
   box-sizing: border-box;
   padding: 32rpx
 }
-.detail-item-title{
+.detail-item-name{
   width: 300rpx
 }
 .detail-hidden{

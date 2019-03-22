@@ -5,7 +5,7 @@
       <image class='type-icon' mode='aspectFill' src='{{type.icon}}'></image>
       <view class='flex-1 justify-content-between'>
         <text class='font-lg'>{{type.type}}</text>
-        <text class='number-sm bold'>{{type.list.length||0}}</text>
+        <text wx:if='{{type.count}}' class='number-sm bold'>{{type.count}}</text>
       </view>
       <view class='type-triangle {{type.opened?"type-triangle-opened":""}}'>
         <text class='iconfont icon-roundleftfill'></text>
@@ -22,7 +22,7 @@
               <text>/{{item.unit}}</text>
             </text>
           </view>
-          <button class='item-add bg-secondary white bold' data-item='{{item}}' data-type='{{type.type}}' bindtap='select'>
+          <button class='item-add bg-secondary white bold' data-item='{{item}}' data-type-index='{{typeIndex}}' bindtap='select'>
             <text class='iconfont icon-add'></text>
           </button>
         </view>
@@ -33,7 +33,7 @@
 <view class='flex-col fixed-bottom bg-white' catchtouchmove='stop'>
   <scroll-view scroll-y class='detail {{detailShowed?"":"detail-hidden"}}'>
     <view wx:for='{{selected}}' wx:key='{{index}}' class='detail-item justify-content-between align-items-center'>
-      <text class='detail-item-title font-lg overflow-ellipsis'>{{item.title}}</text>
+      <text class='detail-item-name font-lg overflow-ellipsis'>{{item.name}}</text>
       <text class='flex-1 number bold danger'>{{format.numberFix(item.price*item.count)}}</text>
       <view class='stepper'>
         <view class='stepper-btn bold align-items-center justify-content-center' data-item='{{item}}' hover-class='navigator-hover' bindtap='decrease'>
