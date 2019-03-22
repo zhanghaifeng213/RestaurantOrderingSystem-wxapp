@@ -19,10 +19,10 @@
             <text>{{item.title}}</text>
             <text class='danger'>
               <text class='number-sm bold'>￥{{format.numberFix(item.price)}}</text>
-              <text>({{item.unit}})</text>
+              <text>/{{item.unit}}</text>
             </text>
           </view>
-          <button class='item-add bg-secondary white bold' data-item='{{item}}' bindtap='select'>
+          <button class='item-add bg-secondary white bold' data-item='{{item}}' data-type='{{type.type}}' bindtap='select'>
             <text class='iconfont icon-add'></text>
           </button>
         </view>

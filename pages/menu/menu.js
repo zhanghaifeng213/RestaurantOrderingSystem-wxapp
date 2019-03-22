@@ -118,10 +118,9 @@ Page({
     })
   },
   select(e){
+    let that = this
     let item = e.currentTarget.dataset.item
-    let selected = this.data.selected
-    let quantity = ++this.data.quantity
-    let totalPrice = Math.round((this.data.totalPrice + e.currentTarget.dataset.item.price)*100)/100
+    let selected = that.data.selected
     let result = selected.find(t => t.id === item.id)
     if (result){
       result.count++
@@ -129,7 +128,11 @@ Page({
       item.count = 1
       selected.push(item)
     }
-    this.setData({selected, quantity, totalPrice})
+    this.setData({ 
+      selected, 
+      quantity: ++that.data.quantity, 
+      totalPrice: Math.round((that.data.totalPrice + e.currentTarget.dataset.item.price) * 100) / 100
+    })
   },
   toggleDetail(){
     this.setData({
@@ -142,16 +145,18 @@ Page({
     })
   },
   increase(e) {
-    let selected = this.data.selected
+    let that = this
+    let selected = that.data.selected
     let index = selected.findIndex(t => t.id === e.currentTarget.dataset.item.id)
     this.setData({
       ['selected[' + index + '].count']: ++selected[index].count,
-      quantity: ++this.data.quantity,
-      totalPrice: Math.round((this.data.totalPrice + e.currentTarget.dataset.item.price) * 100) / 100
+      quantity: ++that.data.quantity,
+      totalPrice: Math.round((that.data.totalPrice + e.currentTarget.dataset.item.price) * 100) / 100
     })
   },
-  decrease(e){
-    let selected = this.data.selected
+  decrease(e) {
+    let that = this
+    let selected = that.data.selected
     let index = selected.findIndex(t => t.id === e.currentTarget.dataset.item.id)
     let count = selected[index].count
     if (count > 1) {
@@ -165,8 +170,8 @@ Page({
       })
     }
     this.setData({
-      quantity: --this.data.quantity,
-      totalPrice: Math.round((this.data.totalPrice - e.currentTarget.dataset.item.price) * 100) / 100
+      quantity: --that.data.quantity,
+      totalPrice: Math.round((that.data.totalPrice - e.currentTarget.dataset.item.price) * 100) / 100
     })
   },
   submit(){
