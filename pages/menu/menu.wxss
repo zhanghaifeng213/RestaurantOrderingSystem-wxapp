@@ -63,6 +63,9 @@
   background-image: linear-gradient(rgba(0,0,0,0),rgba(255,255,255,0.5));
   background-blend-mode: soft-light
 }
+.disabled{
+  background-image: linear-gradient(rgb(255,255,255),rgb(255,255,255))
+}
 .detail{
   max-height: 360rpx;
   border-top: 1px solid #DEDEDE;

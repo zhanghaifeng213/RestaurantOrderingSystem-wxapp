@@ -90,23 +90,19 @@ Page({
   },
   submit(){
     let that = this
-    if (that.data.totalPrice!==0){
-      try{
-        wx.setStorageSync('order', {
-          selected: that.data.selected,
-          totalPrice: that.data.totalPrice,
-          quantity: that.data.quantity,
-          timestampe: new Date().getTime()
-        })
-      } catch(e){
-
-      }
-      wx.navigateTo({
-        url: '/pages/pay/pay',
+    try {
+      wx.setStorageSync('order', {
+        selected: that.data.selected,
+        totalPrice: that.data.totalPrice,
+        quantity: that.data.quantity,
+        timestampe: new Date().getTime()
       })
-    }else{
-      wx.showModal()
+    } catch (e) {
+
     }
+    wx.navigateTo({
+      url: '/pages/pay/pay',
+    })
   },
   stop(){}
 })

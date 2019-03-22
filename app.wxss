@@ -106,6 +106,9 @@ page{
   opacity: 0.7!important
 }
 /* 布局 */
+.hidden{
+  display: none!important
+}
 .fixed,.fixed-top,.fixed-bottom{
   position: fixed!important
 }

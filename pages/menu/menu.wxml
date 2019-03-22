@@ -11,7 +11,7 @@
         <text class='iconfont icon-roundleftfill'></text>
       </view>
     </view>
-    <view wx:if='{{type.opened&&type.list}}' class='type-list flex-warp justify-content-between'>
+    <view class='type-list flex-warp justify-content-between {{type.opened&&type.list?"":"hidden"}}'>
       <view wx:for='{{type.list}}' wx:key='{{index}}' class='item flex-col'>
         <image class='item-img' src='{{item.image}}'></image>
         <view class='flex-1 justify-content-between align-items-center'>
@@ -54,6 +54,6 @@
         <text class='number-sm bold danger'>￥{{format.numberFix(totalPrice)}}</text>
       </view>
     </view>
-    <button class='pay-check white bg-secondary font-lg' bindtap='submit'>确认下单</button>
+    <button class='pay-check white bg-secondary font-lg {{totalPrice===0?"disabled":""}}' disabled='{{totalPrice===0}}' bindtap='submit'>确认下单</button>
   </view>
 </view>

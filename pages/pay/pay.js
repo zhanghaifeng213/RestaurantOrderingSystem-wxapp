@@ -4,7 +4,8 @@ Page({
   data: {
     detailShowed:false,
     userInfo: {},
-    tableNumber: app.globalData.tableNumber
+    tableNumber: app.globalData.tableNumber,
+    restaurantName: app.globalData.restaurantName
   },
   onLoad(){
     try {
@@ -20,7 +21,10 @@ Page({
     })
   },
   pay(){
-    wx.showModal()
+    wx.showModal({
+      title: '提示',
+      content: '功能未实现',
+    })
   },
   getUserInfo(e) {
     let username = e.detail.userInfo.nickName

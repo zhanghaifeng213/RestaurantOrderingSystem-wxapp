@@ -17,7 +17,7 @@
   <view class='order-circle3'></view>
   <view class='order-main bg-white black flex-col'>
     <view class='order-header justify-content-between align-items-center'>
-      <text>苏州龙湖店</text>
+      <text>{{restaurantName}}</text>
       <view class='flex-col align-items-end opacity-50'>
         <text>
           <text class='font-sm'>桌号：</text>
@@ -36,7 +36,7 @@
       </view>
       <view wx:if='{{detailShowed}}' class='flex-col'>
         <view wx:for='{{order.selected}}' wx:key='{{index}}' class='order-detail-item align-items-center'>
-          <text class='flex-1 font-sm opacity-70 overflow-ellipsis'>{{item.title}}</text>
+          <text class='flex-1 font-sm opacity-70 overflow-ellipsis'>{{item.name}}</text>
           <text class='flex-1 text-center number-sm'>×{{item.count}}</text>
           <text class='flex-1 text-right number-sm'>{{format.numberFix(item.price*item.count)}}</text>
         </view>

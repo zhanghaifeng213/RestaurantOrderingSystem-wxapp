@@ -17,11 +17,12 @@ App({
     } else {
       wx.cloud.init({
         traceUser: true,
-        env: "dev-325389"
+        env: 'dev-325389'
       })
     }
     this.globalData = {
-      tableNumber:"B 23"
+      tableNumber:'B 23',
+      restaurantName:'海底捞(上海店)'
     }
   }
 })
