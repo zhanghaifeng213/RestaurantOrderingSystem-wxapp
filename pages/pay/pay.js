@@ -1,7 +1,10 @@
+const app = getApp()
+
 Page({
   data: {
     detailShowed:false,
-    userInfo: {}
+    userInfo: {},
+    tableNumber: app.globalData.tableNumber
   },
   onLoad(){
     try {

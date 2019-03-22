@@ -1,6 +1,9 @@
+const app = getApp()
+
 Page({
   data: {
-    userInfo:{}
+    userInfo:{},
+    tableNumber: app.globalData.tableNumber
   },
   onLoad () {
     try{

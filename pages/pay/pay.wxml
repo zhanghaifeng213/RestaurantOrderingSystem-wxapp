@@ -21,7 +21,7 @@
       <view class='flex-col align-items-end opacity-50'>
         <text>
           <text class='font-sm'>桌号：</text>
-          <text class='number-sm bold'>B 23</text>
+          <text class='number-sm bold'>{{tableNumber}}</text>
         </text>
         <text class='font-sm'>
           <text>下单时间：</text>

@@ -1,115 +1,19 @@
+const db = wx.cloud.database()
+const menu = db.collection('menu')
+
 Page({
   data: {
     totalPrice:0,
     quantity:0,
     detailShowed:false,
-    menu:[
-      {
-        id:"00010000",
-        type:"锅底类",
-        icon:"/image/type-1.png",
-        list: [
-          {
-            id: "00010001",
-            title: "墨鱼丸",
-            price: 28,
-            unit: "份"
-          }, {
-            id: "00010002",
-            title: "虾滑",
-            price: 32,
-            unit: "份"
-          }, {
-            id: "00010003",
-            title: "墨鱼丸",
-            price: 28,
-            unit: "份"
-          }, {
-            id: "00010004",
-            title: "虾滑",
-            price: 32,
-            unit: "份"
-          }
-        ]
-      },{
-        id: "00020000",
-        type: "丸滑类",
-        icon: "/image/type-2.png",
-        list: [
-          {
-            id:"00020001",
-            title: "墨鱼丸",
-            price: 28,
-            unit: "份"
-          }, {
-            id: "00020002",
-            title:"虾滑",
-            price: 32,
-            unit: "份"
-            }, {
-            id: "00020003",
-            title: "墨鱼丸",
-            price: 28,
-            unit: "份"
-            }, {
-            id: "00020004",
-            title: "虾滑",
-            price: 32,
-            unit: "份"
-          }
-        ]
-      },{
-        id:"00030000",
-        type: "特色菜类",
-        icon:"/image/type-3.png",
-        list: [
-          {
-            id: "00030001",
-            title: "墨鱼丸",
-            price: 28,
-            unit: "份"
-          }
-        ]
-      }, {
-        id: "00040000",
-        type: "经典火锅类",
-        icon: "/image/type-4.png",
-        list: [
-          {
-            id: "00040001",
-            title: "墨鱼丸",
-            price: 28,
-            unit: "份"
-          }, {
-            id: "00040002",
-            title: "虾滑",
-            price: 32,
-            unit: "份"
-          }
-        ]
-      }, {
-        id: "00050000",
-        type: "牛肉羊肉类",
-        icon: "/image/type-5.png",
-        list: [
-          {
-            id: "00050001",
-            title: "墨鱼丸",
-            price: 28,
-            unit: "份"
-          }
-        ]
-      }, {
-        id: "0006000-",
-        type: "海鲜河鲜类",
-        icon: "/image/type-6.png"
-      }, {
-        id: "00070000",
-        type: "豆制品类",
-        icon: "/image/type-7.png"
-      }
-    ],
     selected:[]
+  },
+  onLoad(){
+    menu.get().then(({data})=>{
+      this.setData({
+        menu:data
+      })
+    })
   },
   switchType(e){
     const index = e.currentTarget.dataset.index

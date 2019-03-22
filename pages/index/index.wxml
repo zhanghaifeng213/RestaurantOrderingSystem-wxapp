@@ -15,7 +15,7 @@
   <view class='start-circle2'></view>
   <view class='start-circle3'></view>
   <view class='flex-col'>
-    <text class='number bold'>B 23</text>
+    <text class='number bold'>{{tableNumber}}</text>
     <text class='font-sm'>桌号</text>
   </view>
   <text class='font-xl'>开始点餐</text>
