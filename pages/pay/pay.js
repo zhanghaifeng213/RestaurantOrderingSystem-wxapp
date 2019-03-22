@@ -1,6 +1,6 @@
 Page({
   data: {
-
+    detailShowed:false
   },
   onLoad(){
     try {
@@ -8,6 +8,11 @@ Page({
         order: wx.getStorageSync('order')
       })
     } catch (e) { }
+  },
+  switchDetail(){
+    this.setData({
+      detailShowed:!this.data.detailShowed
+    })
   },
   pay(){
     wx.showModal()

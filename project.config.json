@@ -14,7 +14,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.6.0",
 	"appid": "wxa0c312c9fe2868b5",
-	"projectname": "Hot pot ordering system",
+	"projectname": "HotpotOrderingSystem",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

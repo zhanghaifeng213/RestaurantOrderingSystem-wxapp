@@ -61,12 +61,38 @@
   height: 192rpx
 }
 .order-main{
-  min-height: 414rpx;
   box-sizing: border-box;
-  padding: 32rpx;
+  padding: 0 32rpx;
   position: relative
+}
+.order-header,.order-info,.order-footer{
+  height: 108rpx;
+  position: relative;
+}
+.order-main-header::after{
+  content: "";
+  display: block;
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0,0,0,0.6);
+  transform: scale(0.5)
+}
+.order-detail-item{
+  height: 80rpx
+}
+.order-detail-switch{
+  height: 80rpx;
+  line-height: 80rpx;
+  transition: transform 200ms
 }
 .order-pay{
   padding: 60rpx;
   align-self: center
+}
+.rotate180{
+  transform: rotate(180deg)
 }

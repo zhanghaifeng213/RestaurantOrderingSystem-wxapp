@@ -14,8 +14,8 @@
   <view class='order-circle1'></view>
   <view class='order-circle2'></view>
   <view class='order-circle3'></view>
-  <view class='order-main bg-white black flex-col justify-content-between'>
-    <view class='justify-content-between align-items-center'>
+  <view class='order-main bg-white black flex-col'>
+    <view class='order-header justify-content-between align-items-center'>
       <text>苏州龙湖店</text>
       <view class='flex-col align-items-end opacity-50'>
         <text>
@@ -29,17 +29,22 @@
       </view>
     </view>
     <view class='flex-col'>
-      <view class='justify-content-between align-items-center'>
+      <view class='order-info justify-content-between align-items-center'>
         <text class='font-sm opacity-70'>菜品数量</text>
         <text class='number bold'>{{order.quantity}}</text>
       </view>
-      <view class='order-detail justify-content-center'>
-        <text class='iconfont icon-rounddown'></text>
+      <view wx:if='{{detailShowed}}' class='flex-col'>
+        <view wx:for='{{order.selected}}' wx:key='{{index}}' class='order-detail-item align-items-center'>
+          <text class='flex-1 font-sm opacity-70 overflow-ellipsis'>{{item.title}}</text>
+          <text class='flex-1 text-center number-sm'>×{{item.count}}</text>
+          <text class='flex-1 text-right number-sm'>{{format.numberFix(item.price*item.count)}}</text>
+        </view>
       </view>
+      <text class='order-detail-switch text-center iconfont icon-rounddown {{detailShowed?"rotate180":""}}' bindtap='switchDetail'></text>
     </view>
-    <view class='justify-content-between align-items-center'>
+    <view class='order-footer justify-content-between align-items-center'>
       <text class='font-sm opacity-70'>共计金额</text>
-      <text class='number bold'>￥{{order.totalPrice}}</text>
+      <text class='number bold'>￥{{format.numberFix(order.totalPrice)}}</text>
     </view>
   </view>
   <view class='order-pay font-xl white' bindtap='pay'>立即支付</view>
