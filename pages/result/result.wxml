@@ -1,0 +1,4 @@
+<view class='result container rounded box-shadow bg-secondary flex-col align-items-center justify-content-between'>
+  <text class='flex-1 font-xl bold'>取餐号</text>
+  <text class='flex-2 number-xl bold'>{{code}}</text>
+</view>

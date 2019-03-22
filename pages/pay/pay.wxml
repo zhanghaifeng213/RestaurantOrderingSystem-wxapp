@@ -8,7 +8,7 @@
   <view class='vip-info flex-col justify-content-around align-items-start'>
     <text class='opacity-50'>会员卡</text>
     <text wx:if='{{userInfo.username}}' class='overflow-ellipsis'>{{userInfo.username}}</text>
-    <button wx:if='{{!userInfo.username}}' class='vip-login primary bg-transparent font-md' open-type='getUserInfo' lang='zh_CN' bindgetuserinfo='getUserInfo' catchtap='stop'>未登录<text class='iconfont icon-right'></text></button>
+    <button wx:if='{{!userInfo.username}}' class='vip-login primary bg-transparent font-md' open-type='getUserInfo' lang='zh_CN' bindgetuserinfo='getUserInfo' catchtap='stop'>立即登录<text class='iconfont icon-right'></text></button>
   </view>
 </navigator>
 <view class='order bg-secondary flex-col container rounded box-shadow'>

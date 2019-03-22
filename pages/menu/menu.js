@@ -15,6 +15,17 @@ Page({
       })
     })
   },
+  onShow(){
+    const order = wx.getStorageSync('order')
+    if (!order){
+      this.setData({
+        totalPrice: 0,
+        quantity: 0,
+        detailShowed: false,
+        selected: []
+      })
+    }
+  },
   switchType(e){
     const index = e.currentTarget.dataset.index
     this.setData({

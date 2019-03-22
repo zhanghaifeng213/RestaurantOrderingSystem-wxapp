@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/menu/menu",
-    "pages/pay/pay"
+    "pages/pay/pay",
+    "pages/result/result"
   ],
   "window": {
     "backgroundTextStyle": "light",
