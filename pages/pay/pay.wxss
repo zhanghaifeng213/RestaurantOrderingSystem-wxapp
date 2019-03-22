@@ -30,6 +30,14 @@
   width: 606rpx;
   height: 80rpx;
 }
+.vip-login{
+  margin: 0;
+  padding: 0;
+  line-height: 1.2
+}
+.vip-login::after{
+  border: none
+}
 .order{
   margin-top: 40rpx;
   padding: 48rpx 32rpx 0;

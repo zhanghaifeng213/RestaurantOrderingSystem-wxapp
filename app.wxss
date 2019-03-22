@@ -40,6 +40,9 @@ page{
 .bg-white{
   background-color: #FFFFFF!important
 }
+.bg-transparent{
+  background-color: transparent
+}
 /* 字体规格 */
 .number,.number-sm,.number-md,.number-lg,.number-xl{
   font-family: Saira Condensed,Arial, Helvetica, sans-serif

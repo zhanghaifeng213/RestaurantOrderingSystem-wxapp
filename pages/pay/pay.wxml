@@ -1,13 +1,14 @@
 <wxs module='format' src='../../utils/format.wxs'/>
-<navigator url='' class='vip container rounded'>
+<navigator url='' class='vip container rounded' hover-class="none">
   <view class='vip-oval'></view>
   <view class='vip-integral flex-col align-items-end'>
-    <text class='flex-1 bold number-xl overflow-ellipsis'>2430</text>
+    <text class='flex-1 bold number-xl overflow-ellipsis'>{{userInfo.integral||0}}</text>
     <text class='opacity-50'>积分</text>
   </view>
-  <view class='vip-info flex-col justify-content-around'>
+  <view class='vip-info flex-col justify-content-around align-items-start'>
     <text class='opacity-50'>会员卡</text>
-    <text class='overflow-ellipsis'>YujunZhu</text>
+    <text wx:if='{{userInfo.username}}' class='overflow-ellipsis'>{{userInfo.username}}</text>
+    <button wx:if='{{!userInfo.username}}' class='vip-login primary bg-transparent font-md' open-type='getUserInfo' lang='zh_CN' bindgetuserinfo='getUserInfo' catchtap='stop'>未登录<text class='iconfont icon-right'></text></button>
   </view>
 </navigator>
 <view class='order bg-secondary flex-col container rounded box-shadow'>
