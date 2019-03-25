@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/menu/menu",
     "pages/pay/pay",
-    "pages/result/result"
+    "pages/result/result",
+    "pages/user/user"
   ],
   "window": {
     "backgroundTextStyle": "light",

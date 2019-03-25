@@ -1,5 +1,5 @@
-@import 'assets/style/iconfont.wxss';
-@import 'assets/style/font.wxss';
+@import 'style/iconfont.wxss';
+@import 'style/font.wxss';
 
 view,navigator{
   display: flex;

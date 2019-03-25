@@ -1,5 +1,5 @@
 <wxs module='format' src='../../utils/format.wxs'/>
-<navigator url='' class='vip container rounded' hover-class="none">
+<navigator url='/pages/user/user' class='vip container rounded' hover-class="none">
   <view class='vip-oval'></view>
   <view class='vip-integral flex-col align-items-end'>
     <text class='flex-1 bold number-xl overflow-ellipsis'>{{userInfo.integral||0}}</text>

@@ -2,6 +2,7 @@
 	"packOptions": {
 		"ignore": []
 	},
+  "miniprogramRoot": "miniprogram/",
   "cloudfunctionRoot": "cloudfunctions/",
 	"setting": {
 		"urlCheck": true,
