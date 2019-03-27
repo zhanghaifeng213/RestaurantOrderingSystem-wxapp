@@ -16,15 +16,34 @@ Page({
     })
   },
   onShow(){
-    const order = wx.getStorageSync('order')
-    if (!order){
+    try {
+      let order = wx.getStorageSync('order')
       this.setData({
-        totalPrice: 0,
-        quantity: 0,
-        detailShowed: false,
-        selected: []
+        selected: order.selected,
+        totalPrice: order.totalPrice,
+        quantity: order.quantity,
       })
-    }
+    } catch (e) { }
+  },
+  onHide() {
+    try {
+      wx.setStorageSync('order', {
+        selected: this.data.selected,
+        totalPrice: this.data.totalPrice,
+        quantity: this.data.quantity,
+        timestampe: new Date().getTime()
+      })
+    } catch (e) { }
+  },
+  onUnload() {
+    try {
+      wx.setStorageSync('order', {
+        selected: this.data.selected,
+        totalPrice: this.data.totalPrice,
+        quantity: this.data.quantity,
+        timestampe: new Date().getTime()
+      })
+    } catch (e) { }
   },
   switchType(e){
     const index = e.currentTarget.dataset.index
@@ -100,17 +119,6 @@ Page({
     })
   },
   submit(){
-    let that = this
-    try {
-      wx.setStorageSync('order', {
-        selected: that.data.selected,
-        totalPrice: that.data.totalPrice,
-        quantity: that.data.quantity,
-        timestampe: new Date().getTime()
-      })
-    } catch (e) {
-
-    }
     wx.navigateTo({
       url: '/pages/pay/pay',
     })
