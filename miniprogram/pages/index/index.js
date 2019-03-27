@@ -30,6 +30,8 @@ Page({
           } catch (e) { }
         })
       })
+    } else {
+      wx.hideLoading()
     }
   },
   getUserInfo(e){

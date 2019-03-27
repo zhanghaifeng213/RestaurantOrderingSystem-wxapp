@@ -52,17 +52,24 @@ Page({
     })
   },
   getUserInfo(e) {
+    wx.showLoading({
+      title: '登录中...',
+    })
     let username = e.detail.userInfo.nickName
-    let integral = 1234
-    try {
-      wx.setStorageSync('userInfo', {
-        username, integral
+    wx.cloud.callFunction({
+      name: 'login'
+    }).then(({ result }) => {
+      let integral = result.integral;
+      this.setData({
+        userInfo: {
+          username, integral
+        }
+      }, () => {
+        wx.hideLoading()
+        try {
+          wx.setStorageSync('userInfo', this.data.userInfo)
+        } catch (e) { }
       })
-    } catch (e) { }
-    this.setData({
-      userInfo: {
-        username, integral
-      }
     })
   },
   stop() { }

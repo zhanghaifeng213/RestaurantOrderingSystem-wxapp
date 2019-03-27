@@ -5,7 +5,7 @@
       <image class='type-icon' mode='aspectFill' src='{{type.icon}}'></image>
       <view class='flex-1 justify-content-between'>
         <text class='font-lg'>{{type.type}}</text>
-        <text wx:if='{{type.count}}' class='number-sm bold'>{{type.count}}</text>
+        <text wx:if='{{typeCount[typeIndex]}}' class='number-sm bold'>{{typeCount[typeIndex]}}</text>
       </view>
       <view class='type-triangle {{type.opened?"type-triangle-opened":""}}'>
         <text class='iconfont icon-roundleftfill'></text>
@@ -22,7 +22,7 @@
               <text>/{{item.unit}}</text>
             </text>
           </view>
-          <button class='item-add bg-secondary white bold' data-item='{{item}}' data-type-index='{{typeIndex}}' bindtap='select'>
+          <button class='item-add bg-secondary white bold' data-name='{{item.name}}'bindtap='increase'>
             <text class='iconfont icon-add'></text>
           </button>
         </view>
@@ -36,11 +36,11 @@
       <text class='detail-item-name font-lg overflow-ellipsis'>{{item.name}}</text>
       <text class='flex-1 number bold danger'>{{format.numberFix(item.price*item.count)}}</text>
       <view class='stepper'>
-        <view class='stepper-btn bold align-items-center justify-content-center' data-item='{{item}}' hover-class='navigator-hover' bindtap='decrease'>
+        <view class='stepper-btn bold align-items-center justify-content-center' data-name='{{item.name}}' hover-class='navigator-hover' bindtap='decrease'>
           <text>-</text>
         </view>
         <view class='stepper-count flex-1 flex align-items-center justify-content-center'>{{item.count}}份</view>
-        <view class='stepper-btn bold align-items-center justify-content-center' data-item='{{item}}' hover-class='navigator-hover' bindtap='increase'>
+        <view class='stepper-btn bold align-items-center justify-content-center' data-name='{{item.name}}' hover-class='navigator-hover' bindtap='increase'>
           <text class='iconfont icon-add'></text>
         </view>
       </view>
